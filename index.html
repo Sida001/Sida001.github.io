@@ -16,11 +16,34 @@
     }
     h1 { color: #174ea6; }
     h2 { margin-top: 36px; }
+    body {
+  position: relative;
+}
+
+.profile-photo {
+  position: absolute;
+  top: 0;
+  right: 24px;
+  width: 120px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* 给照片留出空间，避免遮住姓名和介绍 */
+body > h1,
+body > h1 + p {
+  margin-right: 150px;
+}
   </style>
 </head>
 <body>
   <h1>SidaNie</h1>
   <p>Welcome-欢迎</p>
+  
+  <img src="photo.jpg" alt="个人照片" class="profile-photo">
+
+  <!-- 下面保留原来的姓名、介绍等内容 -->
 
   <h2>About me</h2>
   <p>在这里介绍你的学校、专业和研究兴趣。</p>
